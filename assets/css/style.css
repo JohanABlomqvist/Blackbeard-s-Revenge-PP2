@@ -11,7 +11,7 @@ html, body {
 body, header, h1, h2, div {
     font-family: Dancing Script, Roboto;
     font-weight: 300;
-    color: #323232;
+    color: #3a3a3a;
 }
 
 .head-container {
@@ -19,6 +19,15 @@ body, header, h1, h2, div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    outline: solid #323232;
+    background-color: #a5b9af;
+    padding: 20px;
+    width: 100%;
+}
+
+body {
+    background-image: url(../images/Battleships.png);
+    background-size: cover;
 }
 
 /* footer */
@@ -26,7 +35,7 @@ footer {
     display:flex; 
     flex-direction:column; 
     outline: solid #323232;
-    background-color: #cc9e83;
+    background-color: #a5b9af;
     padding: 20px;
     width: 100%;
     position: fixed;
