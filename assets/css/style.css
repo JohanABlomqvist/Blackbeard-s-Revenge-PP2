@@ -9,7 +9,7 @@ html, body {
     height: 100%;
 }
 body, header, h1, h2, div, footer {
-    font-family: dancing script, Roboto;
+    font-family: Dancing Script, Roboto;
     font-weight: 300;
     color: #323232;
 }
@@ -19,4 +19,38 @@ body, header, h1, h2, div, footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+/* footer */
+footer { 
+    display:flex; 
+    flex-direction:column; 
+    outline: solid #323232;
+    background-color: #cc9e83;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#copyright, #socials {
+    position: relative;
+    text-align: center;
+    color: #3a3a3a;
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    color: #3a3a3a;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 1%;
 }
