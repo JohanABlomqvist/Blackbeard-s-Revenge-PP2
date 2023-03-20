@@ -14,6 +14,24 @@
     <div class="head-container">
         <h1>Blackbeard's Revenge</h1>
     </div>
+    <!-- Game layout and javascript injections -->
+    <div id="game-info">
+        <p>Turn: <span id="turn-display"></span></p>
+        <p>Info: <span id="info"></span></p>
+    </div>
+    <!-- Playboard container -->
+    <div id="gamesboard-container"></div>
+    <!-- Boat options, draggable into play window -->
+    <div class="option-container">
+        <div class="destroyer-preview destroyer" draggable="true"></div>
+        <div class="submarine-preview submarine" draggable="true"></div>
+        <div class="cruiser-preview cruiser" draggable="true"></div>
+        <div class="battleship-preview battleship" draggable="true"></div>
+        <div class="carrier-preview carrier" draggable="true"></div>
+    </div>
+    <!-- Game buttons -->
+    <button id="flip-button">FLIP</button>
+    <button id="start-button">START</button>
     <!-- copyright and socials -->
     <footer>
         <div id="copyright">
@@ -32,7 +50,7 @@
             </li>
         </ul>
     </footer>
-
+<script src="assets/js/javascript.js"></script>
 <script src="https://kit.fontawesome.com/3e3a132ec3.js" crossorigin="anonymous"></script>
 </body>
 </html>
