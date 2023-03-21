@@ -57,23 +57,67 @@ function addShipPiece(ship) {
     let randomBoolean = Math.random() < 0.5
     let isHorizontal = randomBoolean
     let randomStartIndex = Math.floor(Math.random() * width * width)
-    console.log(randomStartIndex)
-
+    /* Making sure ships stay within game board */
+    let validStart = isHorizontal ? randomStartIndex <= width * width - ship.length ? randomStartIndex :
+        width * width - ship.length :
+    /* Handle verical position */
+    randomStartIndex <= width * width - width * ship.length ? randomStartIndex : 
+        randomStartIndex - ship.length * width + width
+    
     let shipBlocks = []
 
     for (let i = 0; i < ship.length; i++) {
         if (isHorizontal) {
-            shipBlocks.push(allBoardBlocks[Number(randomStartIndex) + i])
+            shipBlocks.push(allBoardBlocks[Number(validStart) + i])
         } else {
-            shipBlocks.push(allBoardBlocks[Number(randomStartIndex) + i * width])
+            shipBlocks.push(allBoardBlocks[Number(validStart) + i * width])
         }
     }
+    /* valid placing for computer ships */
+    let valid
 
+    if (isHorizontal) {
+    shipBlocks.every(( shipBlock, index) => 
+        valid = shipBlocks[0].id % width !== width - (shipBlocks.length - (index + 1)))
+    } else {
+        shipBlocks.every((_shipBlock, index) =>
+            valid = shipBlocks[0].id < 90 + (width * index + 1)
+        )
+    }
+
+    const notTaken = shipBlocks.every(shipBlock => !shipBlock.classList.contains('taken'))
+
+    if (valid && notTaken) {
     shipBlocks.forEach(shipBlock => {
         shipBlock.classList.add(ship.name)
         shipBlock.classList.add('taken')
     })
-    
+    } else {
+        addShipPiece(ship)
+    }
 }
-addShipPiece(destroyer)
-/*  */
+ships.forEach(ship => addShipPiece(ship))
+
+/* Drag player ships */
+let draggedShip
+const optionShips = Array.from(optionContainer.children)
+optionShips.forEach(optionShip => optionShip.addEventListener('dragstart', dragStart))
+
+const allPlayerBlocks = document.querySelectorAll('#player div')
+allPlayerBlocks.forEach(playerBlock => {
+    playerBlock.addEventListener('dragover', dragOver)
+    playerBlock.addEventListener('drop', dropShip)
+})
+
+function dragStart(e) {
+    draggedShip = e.target
+}
+
+function dragOver(e) {
+    e.preventDefault()
+}
+
+function dropShip(e) {
+    const startId = e.target.id
+    const ship = ships[draggedShip]
+}
