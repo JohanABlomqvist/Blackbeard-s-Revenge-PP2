@@ -48,6 +48,19 @@ body {
     height: 20px;
 }
 
+/* Hover styling */
+.hover {
+    background-color: grey;
+}
+
+/* Hit & miss on game board */
+.boom {
+    background-color: red;
+}
+
+.empty {
+    background-color: grey;
+}
 
 /* Option container with ships */
 .option-container{
