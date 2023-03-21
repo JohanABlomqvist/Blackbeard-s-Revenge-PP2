@@ -51,18 +51,22 @@ const battleship = new Ship('battleship', 4)
 const carrier = new Ship('carrier', 5)
 
 const ships = [destroyer, submarine, cruiser, battleship, carrier]
+let notDropped 
 
-function addShipPiece(ship) {
-    const allBoardBlocks = document.querySelectorAll('#computer div')
+function addShipPiece(user, ship, startId) {
+    const allBoardBlocks = document.querySelectorAll(`#${user} div`)
     let randomBoolean = Math.random() < 0.5
-    let isHorizontal = randomBoolean
+    let isHorizontal = user === 'player' ? angle === 0 : randomBoolean
     let randomStartIndex = Math.floor(Math.random() * width * width)
+
+    let startIndex = startId ? startId : randomStartIndex
+
     /* Making sure ships stay within game board */
-    let validStart = isHorizontal ? randomStartIndex <= width * width - ship.length ? randomStartIndex :
+    let validStart = isHorizontal ? startIndex <= width * width - ship.length ? startIndex :
         width * width - ship.length :
     /* Handle verical position */
-    randomStartIndex <= width * width - width * ship.length ? randomStartIndex : 
-        randomStartIndex - ship.length * width + width
+    startIndex <= width * width - width * ship.length ? startIndex : 
+        startIndex - ship.length * width + width
     
     let shipBlocks = []
 
@@ -93,10 +97,11 @@ function addShipPiece(ship) {
         shipBlock.classList.add('taken')
     })
     } else {
-        addShipPiece(ship)
+        if (user === 'computer') addShipPiece(ship)
+        if (user === 'player') notDropped = true
     }
 }
-ships.forEach(ship => addShipPiece(ship))
+ships.forEach(ship => addShipPiece('computer', ship))
 
 /* Drag player ships */
 let draggedShip
@@ -105,11 +110,12 @@ optionShips.forEach(optionShip => optionShip.addEventListener('dragstart', dragS
 
 const allPlayerBlocks = document.querySelectorAll('#player div')
 allPlayerBlocks.forEach(playerBlock => {
-    playerBlock.addEventListener('dragover', dragOver)
+    playerBlock.addEventListener('dragver', dragOver)
     playerBlock.addEventListener('drop', dropShip)
 })
 
 function dragStart(e) {
+    notDropped = false
     draggedShip = e.target
 }
 
@@ -119,5 +125,9 @@ function dragOver(e) {
 
 function dropShip(e) {
     const startId = e.target.id
-    const ship = ships[draggedShip]
+    const ship = ships[draggedShip.id]
+    addShipPiece( 'player', ship, startId)
+    if (!notDropped) {
+        draggedShip.remove()
+    }
 }
