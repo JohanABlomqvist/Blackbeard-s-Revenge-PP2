@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
 }
@@ -29,7 +30,7 @@ body {
     background-image: url(../images/Battleships.png);
     background-size: cover;
 }
-/* game board */
+/* Game board */
 .container {
   display: flex;
 }
@@ -59,12 +60,13 @@ body {
 
 .grid-display {
   width: 400px;
-  height: 400px;
-  margin: 20px;
+  height: 200px;
+  margin-bottom: 50px;
+  align-content: right;
   background-color: yellow;
 }
 
-/* Ships & alignment */
+/* Ships & size */
 .destroyer-container {
   width: 80px;
   height: 40px;
