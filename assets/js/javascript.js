@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     ]
   
-    //Draw the computers ships at randomized locations
+    /* Draw the computer ships at randomized locations */
     function generate(ship) {
       let randomDirection = Math.floor(Math.random() * ship.directions.length)
       let current = ship.directions[randomDirection]
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generate(shipArray[3])
     generate(shipArray[4])
   
-    //Rotate your ships
+    /* Rotate your ships */
     function rotate() {
       if (isHorizontal) {
         destroyer.classList.toggle('destroyer-container-vertical')
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     rotateButton.addEventListener('click', rotate)
   
-    //move around user ship
+    /* Move around player ship on board */
     ships.forEach(ship => ship.addEventListener('dragstart', dragStart))
     userSquares.forEach(square => square.addEventListener('dragstart', dragStart))
     userSquares.forEach(square => square.addEventListener('dragover', dragOver))
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('dragend')
     }
   
-    //Game Logic
+    /* Game Logic */
     function playGame() {
       if (isGameOver) return
       if (currentPlayer === 'user') {
