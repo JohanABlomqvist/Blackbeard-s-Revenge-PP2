@@ -58,16 +58,16 @@ the water when a boat is place for example, also animations when you shoot on th
 
   - Made to fit the pirate overall feel of the website.
 
-![Coloring](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/9eb6a19cb20c84058585d8536043e37be325741c/assets/images/colors-used.PNG)
+![Coloring](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/97c1b61db23e47033d8caf303eda1af547d5dca1/assets/images/colors-used.PNG)
 
 # Features Left to Implement
 
-- Fully functional board 
-- A scan function every 3 rounds on 2x2 on the board
+- A scan function every 3 rounds that scans 2x2 on the board
 - Framing in the gameboard properly
+- Fixing ship placing overlap.
 
 # Testing and Bugs
-- Fixed a bug where I forgot to properly link my css style sheet to all my webpages.
+- Fixed a bug where I forgot to properly link my css style sheet to all my webpage.
 - Fixed typo in linking HTML page
 - CSS had alot of issues making the ripple effect for the boats, ended up realizing I missed the classList.add for the things 
 I wanted to make the ripples with in the Javascript. About 6 hours of intense staring at the screen wondering what was going on right there.
@@ -78,7 +78,7 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
 
 ## Unfixed bugs
 - Ships can be placed ontop of eachother
-- 
+- mobile drag not fixed.
 
 # Validator Testing 
 
