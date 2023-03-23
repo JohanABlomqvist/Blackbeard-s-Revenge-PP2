@@ -39,17 +39,15 @@ I want for user experience is that they a calm as they enter the website, nothin
   - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Portfolio and Contact Me page and is identical in each page to allow for easy navigation.
   - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-![Nav Bar](https://github.com/JohanABlomqvist/johan-dev-cv/blob/cae27726fa795bd4eb209c0468c33735c48c727d/assets/images/Nav-bar.PNG)
+![Header of the page](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/d822e8b2d47dacdf278c6456b83c034cf0585967/assets/images/header.PNG)
 
-- __Landing Page__
+- __Game page__
  
   - The home page includes a picture and information about me and my journey towards being a Fullstack Developer.
    - The aim is to be engaging and give them a good sense of what I want to accomplish, both now and in the future.
 
-![Home Page](https://github.com/JohanABlomqvist/johan-dev-cv/blob/cae27726fa795bd4eb209c0468c33735c48c727d/assets/images/Landing-page.PNG)
+![Home Page](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/d822e8b2d47dacdf278c6456b83c034cf0585967/assets/images/game-board.PNG)
 
-
-![Success form](https://github.com/JohanABlomqvist/johan-dev-cv/blob/80bcd8ca9e2a63dd2a5d39fa38941054068f9b74/assets/images/successpage.PNG)
 
 - __The Footer__ 
 
@@ -57,7 +55,7 @@ I want for user experience is that they a calm as they enter the website, nothin
   - The footer is valuable to the user as it encourages them to keep connected via social media
   - Made the footer stay at the end of the page without forcing it to be stuck to the end of the page, think it fits in better that way.
 
-![Footer](https://github.com/JohanABlomqvist/johan-dev-cv/blob/cae27726fa795bd4eb209c0468c33735c48c727d/assets/images/Footer.PNG)
+![Footer](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/d822e8b2d47dacdf278c6456b83c034cf0585967/assets/images/footer.PNG)
 
 - __Coloring__
 
@@ -78,10 +76,12 @@ I want for user experience is that they a calm as they enter the website, nothin
 I wanted to make the ripples with in the Javascript. About 6 hours of intense staring at the screen wondering what was going on right there.
 - Spent countless hours on typos and aligning rows the wrong way in JavaScript
 - Using arrays and if else functions took me alot of trial and error, probably deleted the project 6 times before my braind wrapped around the basic concepts of it.
-
+- Had problem with function not working the way I intended, fixed by doing a if else statement, can be seen in the changelogs.
+- Had issue with event click on board, added a pointer-events: none; to the problem area, now you can shoot on the board like usual again.
 
 ## Unfixed bugs
-- No bugs that I know of.
+- Ships can be placed ontop of eachother
+- 
 
 # Validator Testing 
 
@@ -126,7 +126,7 @@ I did the same type of testing on my navigation links.
   ![Balsamiq](https://github.com/JohanABlomqvist/johan-dev-cv/blob/ef60a3f80162da6f6854bb0ec3b8a2ff1924229c/assets/images/balsamic.PNG)
 - Git - For version control.
 - Github - To save and store the files for the website.
-- Google Fonts - To import the fonts used on the website. Roboto (300) and Lato (300) Alltho I mainly used Roboto for the whole page.
+- Google Fonts - To import the fonts used on the website. Roboto (300) and Dancing Script (300) Alltho I mainly used Roboto for the whole page.
 - Font Awesome - For the iconography on the website. (Header navigation links and Footer icons)
 - [Am I Responsive?](https://ui.dev/amiresponsive) - Used to make the mockup picture for the Readme.
 
