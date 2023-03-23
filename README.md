@@ -86,7 +86,7 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
 - HTML
   - Warns about empty heading that serves as a placer for text later. [W3C validator](https://validator.w3.org/nu/)
   
-  ![HTML Check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/8f41643792f00319bf99d732ad125e0a5a08e4ba/assets/images/html-check.PNG)
+  ![HTML Check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/3e5b35414f5310fee110636bf1bfa5354e7bc05f/assets/images/html-check.PNG)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
   
