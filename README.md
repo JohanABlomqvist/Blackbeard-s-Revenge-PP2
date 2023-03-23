@@ -83,13 +83,13 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
 # Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
+  - Warns about empty heading that serves as a placer for text later. [W3C validator](https://validator.w3.org/nu/)
   
-  ![HTML Check](https://github.com/JohanABlomqvist/johan-dev-cv/blob/240e631298527273e0ab07ee05196ee97743086b/assets/images/htmlcheck.PNG)
+  ![HTML Check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/41f318470a768eeff4168c8afac225dc9eebda98/assets/images/html check.PNG)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
   
-  ![CSS Check](https://github.com/JohanABlomqvist/johan-dev-cv/blob/240e631298527273e0ab07ee05196ee97743086b/assets/images/csspass.PNG)
+  ![CSS Check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/b0e27ed40184b01c625b23d9b40b33fdadbd1b2f/assets/images/CSScheck.PNG)
 
 - Lighthouse
   - High percentages when running lighthouse, so I'm really happy about that.
