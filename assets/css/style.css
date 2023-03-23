@@ -80,7 +80,7 @@ body {
 .taken,
 .ship {
   position: relative;
-  background-color: hsl(0, 0%, 80%);
+  background-color: hsl(39, 86%, 16%);
 }
 
 /* Curving the ships */
@@ -174,7 +174,7 @@ body {
 }
 
 .battleship-board div {
-  border: 1px solid hsla(0, 0%, 100%, .2);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
 }
 
 .destroyer-container {
