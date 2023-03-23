@@ -254,6 +254,7 @@ body {
 }
 
 .miss::before {
+  pointer-events: none;
   content: '';
   position: absolute;
   animation: hit .2s ease-out forwards;
