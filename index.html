@@ -14,7 +14,14 @@
     <div class="head-container">
         <h1>Blackbeard's Revenge</h1>
     </div>
-    <!-- Game layout and javascript injections -->
+        <!-- Game buttons -->
+        <div class="hidden-info">
+            <button id="start" class="button">Start Game</button>
+            <button id="rotate" class="button">Rotate Your Ships</button>
+            <h3 id="whose-go">Your Go</h3>
+            <h3 id="info"></h3>
+          </div>
+    <!-- Game layout -->
     <div id="game-info">
         <p>Turn: <span id="turn-display"></span></p>
         <p>Info: <span id="info"></span></p>
@@ -25,7 +32,7 @@
         <div class="battleship-board grid-computer"></div>
     </div>
     <!-- Boat options, draggable into play window -->
-    <div class="option-container">
+    <div class="container">
         <div class="grid-display">
             <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
             <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
@@ -34,13 +41,7 @@
             <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
           </div>
     </div>
-    <!-- Game buttons -->
-    <div class="hidden-info">
-        <button id="start" class="button">Start Game</button>
-        <button id="rotate" class="button">Rotate Your Ships</button>
-        <h3 id="whose-go">Your Go</h3>
-        <h3 id="info"></h3>
-      </div>
+
     <!-- copyright and socials -->
     <footer>
         <div id="copyright">
