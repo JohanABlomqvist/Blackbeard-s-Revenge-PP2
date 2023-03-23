@@ -1,10 +1,10 @@
 # Blackbeard's Revenge
-A battleship's game made in JavaScript, not fully functional. but I have the goal to complete it and add features as I get better at coding. Adding a scan function for example, making the playboard not bug out when playing and alot more. 
+A battleship's game made in JavaScript, not fully functional. but I have the goal to complete it and add features as I get better at coding. Adding a scan function for example.
 
 ![Responsice Mockup](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/37cb3fc805c1fcb71cda76fc837e757ba4d0bf3b/assets/images/responsive.PNG)
 
-[View Blackbeard's Revenge on Github pages](https://johanablomqvist.github.io/Blackbeard-s-Revenge-PP2/)
-
+[View Blackbeard's Revenge on live website](https://johanablomqvist.github.io/Blackbeard-s-Revenge-PP2/)
+[View Blackbeard's Revenge on Github pages](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2)
 # CONTENTS
 * [User Experience](#user-experience-ux)
   * [User stories](#user-stories)
@@ -25,9 +25,10 @@ the water when a boat is place for example, also animations when you shoot on th
 
 ### First time visitor goals
 - Hopefully they see a fun game that they want to play again.
-- 
+- Clean website without clutter
 
 ### Returning visitor goals
+- People coming back to play the game as I make improvements.
 - Them looking up on my new projects.
 - Clients or employers getting contact.
 
@@ -93,21 +94,19 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
 - Lighthouse
   - High percentages when running lighthouse, so I'm really happy about that.
 
-  ![Lighthouse check](https://github.com/JohanABlomqvist/johan-dev-cv/blob/712d3f4aeb3cab8c6aeab4fab5088efd05d219dc/assets/images/Validator_test.PNG)
+  ![Lighthouse check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/60c052f5fa71f77c161cbf419c0ab3928516a322/assets/images/Lighthouse.PNG)
 
 - JavaScript
   - 
 
 ## Full testing
 To fully test my website I did the following tests using different browsers (google chrome, mozilla firefox) and devices (Samsung s21pro).
-
 I went through each page using google chrome developer tools to ensure that they responsive on all different screen sizes.
 
 Links
-1. Tested my social links on index.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
-
-
-I did the same type of testing on my navigation links.
+- Tested my social links on index.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
+Game
+- Ship drag does work for mobile, did not have time to implement mobile viability into the game after squishing out bugs for a minimal working product.
 
 
 # Technologies Used
@@ -117,9 +116,6 @@ I did the same type of testing on my navigation links.
 
 ## Frameworks, Media, Libraries & Programs Used
 
-- Balsamiq - Used to create wireframes.  
-  - Used this to draw up a basic concept before I got to work on the design, I think the original sketch didnt deviate alot from the final product!  
-  ![Balsamiq](https://github.com/JohanABlomqvist/johan-dev-cv/blob/ef60a3f80162da6f6854bb0ec3b8a2ff1924229c/assets/images/balsamic.PNG)
 - Git - For version control.
 - Github - To save and store the files for the website.
 - Google Fonts - To import the fonts used on the website. Roboto (300) and Dancing Script (300) Alltho I mainly used Roboto for the whole page.
@@ -130,7 +126,7 @@ I did the same type of testing on my navigation links.
 Github Pages was used to deploy the live website. The instructions to achieve this are below:
 
 - Log in (or sign up) to Github.
-- Find the repository for this project, johan-dev-cv.
+- Find the repository for this project, Blackbeard-s-Revenge-PP2.
 - Click on the Settings link.
 - Click on the Pages link in the left hand side navigation bar.
 - In the Source section, choose main from the drop down select branch menu. Select Root - From the drop down select folder menu.
@@ -141,14 +137,14 @@ Github Pages was used to deploy the live website. The instructions to achieve th
 To fork the  design repository:
 
 - Log in (or sign up) to Github.
-- Go to the repository for this project, JohanABlomqvist/johan-dev-cv.
+- Go to the repository for this project, JohanABlomqvist/Blackbeard-s-Revenge-PP2.
 - Click the Fork button in the top right corner..
 
 ### How to Clone
 To clone the  design repository:
 
 - Log in (or sign up) to GitHub.
-- Go to the repository for this project, JohanABlomqvist/johan-dev-cv.
+- Go to the repository for this project, JohanABlomqvist/Blackbeard-s-Revenge-PP2.
 - Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 - Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 - Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -160,15 +156,15 @@ To clone the  design repository:
 - Readme help from [Kera Cudmore](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md).
 - [Dev-Bowers](https://dev-bowers.com) for serving as an inspiration for the layout of my site.
 - [Web Dev Simplified](https://www.youtube.com/watch?v=G6JTM-zt-dQ) helping me with the css for the game.
-- [Code with Ania Kubów](https://youtu.be/Ubh_k18sX4E) Help with the code for the game.
+- [Code with Ania Kubów](https://youtu.be/Ubh_k18sX4E) Helped with the code for the game.
 ## Content
-All the written content is done by Johan Blomqvist.
+- All the written content is done by Johan Blomqvist.
 ## Media
 - Midway AI for making the background picture.
 - Font Awesome for the nav icons and social icons.
 ## Acknowledgments
 - Chatgpt for being a good learningtool, asking it the right questions can give you alot of clarity on code and how to build it.
 - One of my friend's named Thomas Kjos that works in game development, alot of help and talk's with him over the last week.
-- Lauren-Nicole, my mentor
+- Lauren-Nicole, my mentor for all the support.
 - Kera Cudmore, for all the information about the Readme-file.
-- Stack Overflow for having great examples of JS
+- Stack Overflow for having great examples of JS and CSS working in tandem.
