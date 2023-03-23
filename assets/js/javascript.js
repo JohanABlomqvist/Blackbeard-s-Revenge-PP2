@@ -19,19 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPlayer = 'user'
   const width = 10
 
-  //Create Board
-  function createBoard(grid, squares) {
-    for (let i = 0; i < width*width; i++) {
-      const square = document.createElement('div')
-      square.dataset.id = i
-      grid.appendChild(square)
-      squares.push(square)
-    }
-  }
-  
-  createBoard(userGrid, userSquares)
-  createBoard(computerGrid, computerSquares)
-
   //Ships
   const shipArray = [
     {
@@ -70,6 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
   ]
+
+  //Create Board
+  function createBoard(grid, squares) {
+    for (let i = 0; i < width*width; i++) {
+      const square = document.createElement('div')
+      square.dataset.id = i
+      grid.appendChild(square)
+      squares.push(square)
+    }
+  }
+  
+  createBoard(userGrid, userSquares)
+  createBoard(computerGrid, computerSquares)
 
   //Draw the computers ships in random locations
   function generate(ship) {
@@ -174,22 +174,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isHorizontal && !newNotAllowedHorizontal.includes(shipLastId)) {
       for (let i=0; i < draggedShipLength; i++) {
-        userSquares[parseInt(this.dataset.id) - selectedShipIndex + i].classList.add('taken', shipClass)
+        let directionClass
+        if (i === 0) directionClass = 'start'
+        if (i === draggedShipLength - 1) directionClass = 'end'
+        userSquares[parseInt(this.dataset.id) - selectedShipIndex + i].classList.add('taken', 'horizontal', directionClass, shipClass)
       }
     //As long as the index of the ship you are dragging is not in the newNotAllowedVertical array! This means that sometimes if you drag the ship by its
     //index-1 , index-2 and so on, the ship will rebound back to the displayGrid.
     } else if (!isHorizontal && !newNotAllowedVertical.includes(shipLastId)) {
       for (let i=0; i < draggedShipLength; i++) {
-        userSquares[parseInt(this.dataset.id) - selectedShipIndex + width*i].classList.add('taken', shipClass)
+        let directionClass
+        if (i === 0) directionClass = 'start'
+        if (i === draggedShipLength - 1) directionClass = 'end'
+        userSquares[parseInt(this.dataset.id) - selectedShipIndex + width*i].classList.add('taken', 'vertical', directionClass, shipClass)
       }
     } else return
+
     displayGrid.removeChild(draggedShip)
+    if(!displayGrid.querySelector('.ship')) allShipsPlaced = true
   }
 
   function dragEnd() {
-    console.log('dragend')
+    // console.log('dragend')
   }
-
   //Game Logic
   function playGame() {
     if (isGameOver) return

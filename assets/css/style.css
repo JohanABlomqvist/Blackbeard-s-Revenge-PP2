@@ -39,20 +39,22 @@ body {
     background-size: cover;
 }
 
-/* Buttons */
 .button {
   font-size: inherit;
-  background-color: #a5b9af;
+  background-color: hsl(30, 100%, 50%);
   padding: .5em 1em;
   outline: none;
   border: none;
   text-decoration: none;
+  cursor: pointer;
   border-radius: .2em;
-    color: #dee6e2;
+  color: #333;
 }
 
+.button:hover, .button:focus {
+  background-color: hsl(30, 100%, 40%);
+}
 
-/* Game board */
 .container {
   display: flex;
   justify-content: center;
@@ -67,36 +69,111 @@ body {
   grid-template-columns: repeat(10, 4.6vmin);
 }
 
-.battleship-board div {
-  border: 1px solid hsla(0 , 0%, 100%, .2);
+.grid-computer > .taken,
+.grid-computer > .boom {
+  background-color: hsl(200, 100%, 50%) !important;
+  border-radius: 0 !important;
 }
 
-/* Draggable ships grid */
+.taken,
+.ship {
+  position: relative;
+  background-color: hsl(0, 0%, 80%);
+}
+
+.taken.start.vertical,
+.taken.start.vertical::before {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.taken.end.vertical,
+.taken.end.vertical::before {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.taken.start.horizontal,
+.taken.start.horizontal::before {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.taken.end.horizontal,
+.taken.end.horizontal::before {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.taken.vertical::before,
+.taken.horizontal::before {
+  content: '';
+  position: absolute;
+  border: .3vmin solid white;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+}
+
+.taken.horizontal::before {
+  animation: ripplesY 3s linear infinite;
+  border-left: none;
+  border-right: none;
+}
+
+.taken.vertical::before {
+  animation: ripplesX 3s linear infinite;
+  border-top: none;
+  border-bottom: none;
+}
+
+@keyframes ripplesX {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1.5);
+  }
+}
+
+@keyframes ripplesY {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(1.5);
+  }
+}
+
 .grid-display {
   display: flex;
 }
 
-#ship > div {
+.ship > div {
   width: 4.6vmin;
   height: 4.6vmin;
 }
 
 .ship {
   display: flex;
-  flex-wrap: wrapping;
+  flex-wrap: wrap;
   margin: 1vmin;
   width: calc(4.6vmin * var(--width, 1));
   height: calc(4.6vmin * var(--height, 1));
   border-radius: 2.3vmin;
 }
 
-/* Ship's color */
-.taken, .ship {
-  background-color: hsl(0, 0%, 80%);
+.battleship-board div {
+  border: 1px solid hsla(0, 0%, 100%, .2);
 }
 
-
-/* Ships & size */
 .destroyer-container {
   --width: 2;
 }
@@ -108,7 +185,7 @@ body {
 
 .submarine-container,
 .cruiser-container {
-  --width: 3; 
+  --width: 3;
 }
 
 .submarine-container-vertical,
@@ -134,7 +211,7 @@ body {
   --height: 5;
   --width: 1;
 }
-/* Button mechanics & info text*/
+
 .hidden-info {
   font-size: 1.5rem;
   align-items: center;
@@ -145,14 +222,66 @@ body {
   margin: 1rem;
 }
 
-/* Hit & Miss */
+.miss,
 .boom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boom::after,
+.miss::after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.miss::after {
+  background-color: white;
+}
+
+.boom::after {
   background-color: red;
 }
 
-.miss {
-   background-color: black;
+.miss::before {
+  content: '';
+  position: absolute;
+  animation: hit .2s ease-out forwards;
+  border: 1vmin solid white;
+  border-radius: 100%;
+  width: 2vmin;
+  height: 2vmin;
 }
+
+.boom {
+  animation: boom .2s ease-out forwards;
+}
+
+@keyframes hit {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+@keyframes boom {
+  0% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 80%);
+  }
+}
+
 
 /* footer */
 footer { 
