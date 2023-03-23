@@ -40,8 +40,8 @@ the water when a boat is place for example, also animations when you shoot on th
 
 - __Game page__
  
-  - The home page includes a picture and information about me and my journey towards being a Fullstack Developer.
-   - The aim is to be engaging and give them a good sense of what I want to accomplish, both now and in the future.
+  - The home page includes a picture of ships and sails in the background complete with  gamewindow's and grids.
+   - The aim is to give the user a positive experience while playing the game.
 
 ![Home Page](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/d822e8b2d47dacdf278c6456b83c034cf0585967/assets/images/game-board.PNG)
 
@@ -97,7 +97,8 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
   ![Lighthouse check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/60c052f5fa71f77c161cbf419c0ab3928516a322/assets/images/Lighthouse.PNG)
 
 - JavaScript
-  - 
+  -  Got warning's about missing semicolon's and  using const saying:'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+  Other then that no issues at all.
 
 ## Full testing
 To fully test my website I did the following tests using different browsers (google chrome, mozilla firefox) and devices (Samsung s21pro).
@@ -106,6 +107,7 @@ I went through each page using google chrome developer tools to ensure that they
 Links
 - Tested my social links on index.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
 Game
+- Tried completing the game on above said browsers and it did work like intended, clicked all the buttons and they also work like intended. 
 - Ship drag does work for mobile, did not have time to implement mobile viability into the game after squishing out bugs for a minimal working product.
 
 
