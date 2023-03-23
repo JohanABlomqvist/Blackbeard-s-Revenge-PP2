@@ -75,11 +75,13 @@ body {
   border-radius: 2.3vmin;
 }
 
-/* Ships & size */
+/* Ship's color */
 .taken, .ship {
   background-color: hsl(0, 0%, 80%);
 }
 
+
+/* Ships & size */
 .destroyer-container {
   --width: 2;
 }
