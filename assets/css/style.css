@@ -38,7 +38,7 @@ body {
     background-image: url(../images/Battleships.png);
     background-size: cover;
 }
-
+/* Buttons & hover */
 .button {
   font-size: inherit;
   background-color: hsl(30, 100%, 50%);
@@ -54,7 +54,7 @@ body {
 .button:hover, .button:focus {
   background-color: hsl(30, 100%, 40%);
 }
-
+/* Ship stuff */
 .container {
   display: flex;
   justify-content: center;
@@ -81,6 +81,7 @@ body {
   background-color: hsl(0, 0%, 80%);
 }
 
+/* Curving the ships */
 .taken.start.vertical,
 .taken.start.vertical::before {
   border-top-left-radius: 50%;
@@ -127,7 +128,7 @@ body {
   border-top: none;
   border-bottom: none;
 }
-
+ /* Did anyone say effects? Boat ripples. */
 @keyframes ripplesX {
   0% {
     opacity: 1;
@@ -155,7 +156,7 @@ body {
 .grid-display {
   display: flex;
 }
-
+/* Ship stuff */
 .ship > div {
   width: 4.6vmin;
   height: 4.6vmin;
@@ -221,7 +222,7 @@ body {
 .info-text {
   margin: 1rem;
 }
-
+/* Hit and miss effects */
 .miss,
 .boom {
   display: flex;

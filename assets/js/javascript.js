@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPlayer = 'user'
   const width = 10
 
-  //Ships
+  /* Ships */
   const shipArray = [
     {
       name: 'destroyer',
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ]
 
-  //Create Board
+  /* Create Board */
   function createBoard(grid, squares) {
     for (let i = 0; i < width*width; i++) {
       const square = document.createElement('div')
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   createBoard(userGrid, userSquares)
   createBoard(computerGrid, computerSquares)
 
-  //Draw the computers ships in random locations
+  /* Draw the computers ships in random locations */
   function generate(ship) {
     let randomDirection = Math.floor(Math.random() * ship.directions.length)
     let current = ship.directions[randomDirection]
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   generate(shipArray[3])
   generate(shipArray[4])
 
-  //Rotate the ships
+  /* Rotate the ships */
   function rotate() {
     if (isHorizontal) {
       destroyer.classList.toggle('destroyer-container-vertical')
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   rotateButton.addEventListener('click', rotate)
 
-  //move around user ship
+  /* move around user ship */
   ships.forEach(ship => ship.addEventListener('dragstart', dragStart))
   userSquares.forEach(square => square.addEventListener('dragstart', dragStart))
   userSquares.forEach(square => square.addEventListener('dragover', dragOver))
@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i === draggedShipLength - 1) directionClass = 'end'
         userSquares[parseInt(this.dataset.id) - selectedShipIndex + i].classList.add('taken', 'horizontal', directionClass, shipClass)
       }
-    //As long as the index of the ship you are dragging is not in the newNotAllowedVertical array! This means that sometimes if you drag the ship by its
-    //index-1 , index-2 and so on, the ship will rebound back to the displayGrid.
+    /* As long as the index of the ship you are dragging is not in the newNotAllowedVertical array! This means that sometimes if you drag the ship by its
+    index-1 , index-2 and so on, the ship will rebound back to the displayGrid. */
     } else if (!isHorizontal && !newNotAllowedVertical.includes(shipLastId)) {
       for (let i=0; i < draggedShipLength; i++) {
         let directionClass
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function dragEnd() {
     // console.log('dragend')
   }
-  //Game Logic
+  /* Game Logic */
   function playGame() {
     if (isGameOver) return
     if (currentPlayer === 'user') {
