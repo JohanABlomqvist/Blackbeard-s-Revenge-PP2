@@ -1,14 +1,13 @@
 # Blackbeard's Revenge
 A battleship's game made in JavaScript, not fully functional. but I have the goal to complete it and add features as I get better at coding. Adding a scan function for example, making the playboard not bug out when playing and alot more. 
 
-![Responsice Mockup](https://github.com/JohanABlomqvist/johan-dev-cv/blob/178767a103fb3b2f6aaebfc975b307c8f80c707e/assets/images/amiresp.PNG)
+![Responsice Mockup](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/37cb3fc805c1fcb71cda76fc837e757ba4d0bf3b/assets/images/responsive.PNG)
 
-[View Johan's Dev Journey on Github pages](https://johanablomqvist.github.io/johan-dev-cv/index.html)
+[View Blackbeard's Revenge on Github pages](https://johanablomqvist.github.io/Blackbeard-s-Revenge-PP2/)
 
 # CONTENTS
 * [User Experience](#user-experience-ux)
   * [User stories](#user-stories)
-
 * [Existing Features](#existing-features)
 * [Features Left to Implement](#features-left-to-implement)
 * [Testing and Bugs](#testing-and-bugs)
@@ -19,14 +18,14 @@ A battleship's game made in JavaScript, not fully functional. but I have the goa
 
 # User Experience (UX)
 
-Johan's Dev Journey is a website that will build over time, and get expanded upon as Johan gathers knowledge in coding, the goals are simple, make is easy to access and a clear goal for the user has to be set.
+- Blackbeard's Revenge is the first project Johan has made in JavaScript, made an easy website to access and focused alot on the CSS to make ripples in
+the water when a boat is place for example, also animations when you shoot on the board. 
 
-I want for user experience is that they a calm as they enter the website, nothing out of the ordinary that makes you wonder how to find anything, it should be really easy to see what you can click and use as you come in for the first time. 
 ## User Stories
 
 ### First time visitor goals
-- Know more about me as a developer.
-- Seeing what I am capable of. 
+- Hopefully they see a fun game that they want to play again.
+- 
 
 ### Returning visitor goals
 - Them looking up on my new projects.
@@ -34,10 +33,7 @@ I want for user experience is that they a calm as they enter the website, nothin
 
 # Existing Features 
 
-- __Header of the page__
-
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Portfolio and Contact Me page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+- __Header__
 
 ![Header of the page](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/d822e8b2d47dacdf278c6456b83c034cf0585967/assets/images/header.PNG)
 
