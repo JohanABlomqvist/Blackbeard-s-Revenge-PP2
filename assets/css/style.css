@@ -30,8 +30,8 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    outline: solid #323232;
-    background-color: #cc9e83;
+    outline: solid #416d7e;
+    background-color: #416d7e;
     padding: 20px;
     width: 100%;
 }
