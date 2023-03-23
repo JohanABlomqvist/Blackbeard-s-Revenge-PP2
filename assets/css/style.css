@@ -30,32 +30,29 @@ body {
     background-image: url(../images/Battleships.png);
     background-size: cover;
 }
+
+/* Buttons */
+.button {
+  background-color: hsl(30, 100%, 50%);
+}
+
 /* Game board */
 .container {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.grid-user {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: blue;
-  margin: 20px;
+.battleship-board {
+  margin: 2vmin;
+  display: grid;
+  background-color: hsl(200, 100%, 50%);
+  grid-template-rows: repeat(10, 4.6vmin);
+  grid-template-columns: repeat(10, 4.6vmin);
 }
 
-.grid div {
-  width: 40px;
-  height: 40px;
-}
-
-.grid-computer {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: lightgreen;
-  margin: 20px;
+.battleship-board div {
+  border: 1px solid hsla(0 , 0%, 100%, .2);
 }
 
 .grid-display {
