@@ -30,7 +30,7 @@ the water when a boat is place for example, also animations when you shoot on th
 ### Returning visitor goals
 - People coming back to play the game as I make improvements.
 - Them looking up on my new projects.
-- Clients or employers getting contact.
+- Clients or employers getting in contact.
 
 # Existing Features 
 
@@ -56,9 +56,9 @@ the water when a boat is place for example, also animations when you shoot on th
 
 - __Coloring__
 
-  - Made to be easy on the eye's and give off a soothing comforting feel.
+  - Made to fit the pirate overall feel of the website.
 
-![Coloring](https://github.com/JohanABlomqvist/johan-dev-cv/blob/6fae0e57436933ffb205419feccc2f1458a46c38/assets/images/coloringwebsite.PNG)
+![Coloring](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/9eb6a19cb20c84058585d8536043e37be325741c/assets/images/colors-used.PNG)
 
 # Features Left to Implement
 
@@ -85,7 +85,7 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
 - HTML
   - Warns about empty heading that serves as a placer for text later. [W3C validator](https://validator.w3.org/nu/)
   
-  ![HTML Check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/41f318470a768eeff4168c8afac225dc9eebda98/assets/images/html check.PNG)
+  ![HTML Check](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/8f41643792f00319bf99d732ad125e0a5a08e4ba/assets/images/html-check.PNG)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
   
