@@ -15,14 +15,10 @@ body, header, h1, h2, div {
     color: #dee6e2;
 }
 
-h3 {
+h3, p {
   justify-content: center;
   font-family: Roboto, Dancing Script;
-}
-
-p {
-  font-family: Roboto, Dancing Script;
-  margin-right: 10px;
+  margin-right: 2%;
 }
 
 .head-container {
@@ -80,7 +76,7 @@ body {
 .taken,
 .ship {
   position: relative;
-  background-color: hsl(39, 86%, 16%);
+  background-color: hsl(39, 89%, 30%);
 }
 
 /* Curving the ships */
@@ -221,9 +217,17 @@ body {
   flex-direction: column;
 }
 
-.info-text {
-  margin: 1rem;
+#container {
+  padding-top: 0.5%;
+  padding-right: 1%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+
+
+
+
 /* Hit and miss effects */
 .miss,
 .boom {
@@ -334,6 +338,12 @@ footer {
 @media screen and (max-width: 550px) {
   .head-container {
     font-size: 150%;
+  }
+
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
