@@ -1,108 +1,180 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Blackbeard's Revenge
+A battleship's game made in JavaScript, not fully functional. but I have the goal to complete it and add features as I get better at coding. Adding a scan function for example, making the playboard not bug out when playing and alot more. 
 
-Welcome JohanABlomqvist,
+![Responsice Mockup](https://github.com/JohanABlomqvist/johan-dev-cv/blob/178767a103fb3b2f6aaebfc975b307c8f80c707e/assets/images/amiresp.PNG)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[View Johan's Dev Journey on Github pages](https://johanablomqvist.github.io/johan-dev-cv/index.html)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# CONTENTS
+* [User Experience](#user-experience-ux)
+  * [User stories](#user-stories)
 
-## Gitpod Reminders
+* [Existing Features](#existing-features)
+* [Features Left to Implement](#features-left-to-implement)
+* [Testing and Bugs](#testing-and-bugs)
+* [Validator Testing](#validator-testing)
+* [Technologies Used](#technologies-used)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# User Experience (UX)
 
-`python3 -m http.server`
+Johan's Dev Journey is a website that will build over time, and get expanded upon as Johan gathers knowledge in coding, the goals are simple, make is easy to access and a clear goal for the user has to be set.
 
-A blue button should appear to click: _Make Public_,
+I want for user experience is that they a calm as they enter the website, nothing out of the ordinary that makes you wonder how to find anything, it should be really easy to see what you can click and use as you come in for the first time. 
+## User Stories
 
-Another blue button should appear to click: _Open Browser_.
+### First time visitor goals
+- Know more about me as a developer.
+- Seeing what I am capable of. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Returning visitor goals
+- Them looking up on my new projects.
+- Clients or employers getting contact.
 
-A blue button should appear to click: _Make Public_,
+# Existing Features 
 
-Another blue button should appear to click: _Open Browser_.
+- __Navigation bar__
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Portfolio and Contact Me page and is identical in each page to allow for easy navigation.
+  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-To log into the Heroku toolbelt CLI:
+![Nav Bar](https://github.com/JohanABlomqvist/johan-dev-cv/blob/cae27726fa795bd4eb209c0468c33735c48c727d/assets/images/Nav-bar.PNG)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- __Landing Page__
+ 
+  - The home page includes a picture and information about me and my journey towards being a Fullstack Developer.
+   - The aim is to be engaging and give them a good sense of what I want to accomplish, both now and in the future.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Home Page](https://github.com/JohanABlomqvist/johan-dev-cv/blob/cae27726fa795bd4eb209c0468c33735c48c727d/assets/images/Landing-page.PNG)
 
-------
 
-## Release History
+![Success form](https://github.com/JohanABlomqvist/johan-dev-cv/blob/80bcd8ca9e2a63dd2a5d39fa38941054068f9b74/assets/images/successpage.PNG)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- __The Footer__ 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+  - The footer section includes links to the relevant social media sites. The links will open to a new tab to allow easy navigation for the user. 
+  - The footer is valuable to the user as it encourages them to keep connected via social media
+  - Made the footer stay at the end of the page without forcing it to be stuck to the end of the page, think it fits in better that way.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Footer](https://github.com/JohanABlomqvist/johan-dev-cv/blob/cae27726fa795bd4eb209c0468c33735c48c727d/assets/images/Footer.PNG)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- __Coloring__
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  - Made to be easy on the eye's and give off a soothing comforting feel.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Coloring](https://github.com/JohanABlomqvist/johan-dev-cv/blob/6fae0e57436933ffb205419feccc2f1458a46c38/assets/images/coloringwebsite.PNG)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Features Left to Implement
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Fully functional board 
+- A scan function every 3 rounds on 2x2 on the board
+- Framing in the gameboard properly
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Testing and Bugs
+- Fixed a bug where I forgot to properly link my css style sheet to all my webpages.
+- Fixed typo in linking HTML page
+- CSS had alot of issues making the ripple effect for the boats, ended up realizing I missed the classList.add for the things 
+I wanted to make the ripples with in the Javascript. About 6 hours of intense staring at the screen wondering what was going on right there.
+- Spent countless hours on typos and aligning rows the wrong way in JavaScript
+- Using arrays and if else functions took me alot of trial and error, probably deleted the project 6 times before my braind wrapped around the basic concepts of it.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Unfixed bugs
+- No bugs that I know of.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Validator Testing 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
+  
+  ![HTML Check](https://github.com/JohanABlomqvist/johan-dev-cv/blob/240e631298527273e0ab07ee05196ee97743086b/assets/images/htmlcheck.PNG)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+  
+  ![CSS Check](https://github.com/JohanABlomqvist/johan-dev-cv/blob/240e631298527273e0ab07ee05196ee97743086b/assets/images/csspass.PNG)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Lighthouse
+  - High percentages when running lighthouse, so I'm really happy about that.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+  ![Lighthouse check](https://github.com/JohanABlomqvist/johan-dev-cv/blob/712d3f4aeb3cab8c6aeab4fab5088efd05d219dc/assets/images/Validator_test.PNG)
 
-------
+- JavaScript
+  - 
 
-## FAQ about the uptime script
+## Full testing
+To fully test my website I did the following tests using different browsers (google chrome, mozilla firefox) and devices (Samsung s21pro).
 
-**Why have you added this script?**
+I went through each page using google chrome developer tools to ensure that they responsive on all different screen sizes.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Links
+1. Tested my social links on index.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
+2. Tested my social links on contact-me.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
+3. Tested my social links on portfolio.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
+4. Tested my social links on success.html, clicking popped out a new tab with the requested site as expected , both on mobile, mozilla, firefox, chrome and opera.
 
-**How will this affect me?**
+I did the same type of testing on my navigation links.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+# Technologies Used
+## Languages Used
+- HTML, CSS and JavaScript were used to create this website
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+## Frameworks, Media, Libraries & Programs Used
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- Balsamiq - Used to create wireframes.  
+  - Used this to draw up a basic concept before I got to work on the design, I think the original sketch didnt deviate alot from the final product!  
+  ![Balsamiq](https://github.com/JohanABlomqvist/johan-dev-cv/blob/ef60a3f80162da6f6854bb0ec3b8a2ff1924229c/assets/images/balsamic.PNG)
+- Git - For version control.
+- Github - To save and store the files for the website.
+- Google Fonts - To import the fonts used on the website. Roboto (300) and Lato (300) Alltho I mainly used Roboto for the whole page.
+- Font Awesome - For the iconography on the website. (Header navigation links and Footer icons)
+- [Am I Responsive?](https://ui.dev/amiresponsive) - Used to make the mockup picture for the Readme.
 
-**Can I opt out?**
+# Deployment
+Github Pages was used to deploy the live website. The instructions to achieve this are below:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Log in (or sign up) to Github.
+- Find the repository for this project, johan-dev-cv.
+- Click on the Settings link.
+- Click on the Pages link in the left hand side navigation bar.
+- In the Source section, choose main from the drop down select branch menu. Select Root - From the drop down select folder menu.
+- Click Save. Your live Github Pages site is now deployed at the URL shown.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Local Development
+### How to Fork
+To fork the  design repository:
 
-**Anything more?**
+- Log in (or sign up) to Github.
+- Go to the repository for this project, JohanABlomqvist/johan-dev-cv.
+- Click the Fork button in the top right corner..
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### How to Clone
+To clone the  design repository:
 
----
+- Log in (or sign up) to GitHub.
+- Go to the repository for this project, JohanABlomqvist/johan-dev-cv.
+- Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+- Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+- Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
-Happy coding!
+
+# Credits
+
+## Code Used
+- Readme help from [Kera Cudmore](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md).
+- [Dev-Bowers](https://dev-bowers.com) for serving as an inspiration for the layout of my site.
+- [Web Dev Simplified](https://www.youtube.com/watch?v=G6JTM-zt-dQ) helping me with the css for the game.
+- [Code with Ania Kubów](https://youtu.be/Ubh_k18sX4E) Help with the code for the game.
+## Content
+All the written content is done by Johan Blomqvist.
+## Media
+- Midway AI for making the background picture.
+- Font Awesome for the nav icons and social icons.
+## Acknowledgments
+- Chatgpt for being a good learningtool, asking it the right questions can give you alot of clarity on code and how to build it.
+- One of my friend's named Thomas Kjos that works in game development, alot of help and talk's with him over the last week.
+- Lauren-Nicole, my mentor
+- Kera Cudmore, for all the information about the Readme-file.
+- Stack Overflow for having great examples of JS
