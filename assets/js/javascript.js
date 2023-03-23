@@ -248,7 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function computerGo() {
     let random = Math.floor(Math.random() * userSquares.length)
     if (!userSquares[random].classList.contains('boom')) {
-      userSquares[random].classList.add('boom')
+
+      if (userSquares[random].classList.contains('taken')) {
+        userSquares[random].classList.add('boom')
+      } else {
+        userSquares[random].classList.add('miss')
+      }
+
       if (userSquares[random].classList.contains('destroyer')) cpuDestroyerCount++
       if (userSquares[random].classList.contains('submarine')) cpuSubmarineCount++
       if (userSquares[random].classList.contains('cruiser')) cpuCruiserCount++
