@@ -4,6 +4,7 @@ A battleship's game made in JavaScript, not fully functional. but I have the goa
 ![Responsice Mockup](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/37cb3fc805c1fcb71cda76fc837e757ba4d0bf3b/assets/images/responsive.PNG)
 
 [View Blackbeard's Revenge on live website](https://johanablomqvist.github.io/Blackbeard-s-Revenge-PP2/)
+
 [View Blackbeard's Revenge on Github pages](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2)
 # CONTENTS
 * [User Experience](#user-experience-ux)
