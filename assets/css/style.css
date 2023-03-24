@@ -225,9 +225,6 @@ body {
   align-content: center;
 }
 
-
-
-
 /* Hit and miss effects */
 .miss,
 .boom {
@@ -289,7 +286,6 @@ body {
     background-color: hsl(0, 0%, 80%);
   }
 }
-
 
 /* footer */
 footer { 
