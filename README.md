@@ -1,7 +1,7 @@
 # Blackbeard's Revenge
 A battleship's game made in JavaScript, not fully functional. but I have the goal to complete it and add features as I get better at coding. Adding a scan function for example.
 
-![Responsice Mockup](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/37cb3fc805c1fcb71cda76fc837e757ba4d0bf3b/assets/images/responsive.PNG)
+![Responsice Mockup](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/ef117cb00cada755013ccd118ebfc6a35db46ebf/assets/images/responsive.PNG)
 
 [View Blackbeard's Revenge on live website](https://johanablomqvist.github.io/Blackbeard-s-Revenge-PP2/)
 
@@ -44,7 +44,7 @@ the water when a boat is place for example, also animations when you shoot on th
   - The home page includes a picture of ships and sails in the background complete with  gamewindow's and grids.
    - The aim is to give the user a positive experience while playing the game.
 
-![Home Page](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/d822e8b2d47dacdf278c6456b83c034cf0585967/assets/images/game-board.PNG)
+![Home Page](https://github.com/JohanABlomqvist/Blackbeard-s-Revenge-PP2/blob/ef117cb00cada755013ccd118ebfc6a35db46ebf/assets/images/game-board.PNG)
 
 
 - __The Footer__ 
