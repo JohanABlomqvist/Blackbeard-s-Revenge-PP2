@@ -46,7 +46,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   border-radius: .2em;
-  color: #333;
+  color: #1a1919;
 }
 
 .button:hover, .button:focus {
