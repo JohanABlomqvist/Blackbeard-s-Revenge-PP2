@@ -76,6 +76,8 @@ I wanted to make the ripples with in the Javascript. About 6 hours of intense st
 - Using arrays and if else functions took me alot of trial and error, probably deleted the project 6 times before my braind wrapped around the basic concepts of it.
 - Had problem with function not working the way I intended, fixed by doing a if else statement, can be seen in the changelogs.
 - Had issue with event click on board, added a pointer-events: none; to the problem area, now you can shoot on the board like usual again.
+- Found a problem where you can click the start game button many times enabling the computer so shoot as many times as you clicked after each turn.
+so I made the button hide until ships are placed on the board and disappear again after being clicked. 
 
 ## Unfixed bugs
 - Ships can be placed ontop of eachother
@@ -110,7 +112,8 @@ Links
 Game
 - Tried completing the game on above said browsers and it did work like intended, clicked all the buttons and they also work like intended. 
 - Ship drag does work for mobile, did not have time to implement mobile viability into the game after squishing out bugs for a minimal working product.
-
+- Found a problem where you can click the start game button many times enabling the computer so shoot as many times as you clicked after each turn.
+so I made the button hide until ships are placed on the board and disappear again after being clicked. 
 
 # Technologies Used
 ## Languages Used
