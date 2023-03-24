@@ -10,11 +10,14 @@
     <title>Blackbeard's Revenge</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
-<body>
-    <div class="head-container">
-        <h1>Blackbeard's Revenge</h1>
-    </div>
+<body onload="showPopup()">
+    <header>
+        <div class="head-container">
+            <h1>Blackbeard's Revenge</h1>
+        </div>
+    </header>
     <!-- Game information text -->
+<main>
     <div id="container">
         <p>Turn: <span id="turn-display"></span></p>
         <h3 id="whose-go" class="info-text">Your Go</h3>
@@ -29,7 +32,7 @@
     <!-- Game buttons -->
     <div class="container hidden-info">
         <div class="setup-buttons">
-            <button id="start" class="button">Start Game</button>
+            <button id="start" class="button" onclick="startGame()">Start Game</button>
             <button id="rotate" class="button">Rotate Your Ships</button>
         </div>
     </div>
@@ -41,14 +44,13 @@
             <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
             <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
             <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
-          </div>
+        </div>
     </div>
-
+</main>
     <!-- copyright and socials -->
     <footer>
         <div id="copyright">
-        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Blackbeard's Revenge</p>
-        
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Blackbeard's Revenge</p>
         </div>
         <ul class="social-networks">
             <li>
@@ -62,6 +64,12 @@
             </li>
         </ul>
     </footer>
+    <!-- Scripts for the page -->
+    <script>
+        function showPopup() {
+          alert("Please place ships before starting the game!");
+        }
+      </script>
 <script src="assets/js/javascript.js"></script>
 <script src="https://kit.fontawesome.com/3e3a132ec3.js" crossorigin="anonymous"></script>
 </body>

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cruiser = document.querySelector('.cruiser-container')
   const battleship = document.querySelector('.battleship-container')
   const carrier = document.querySelector('.carrier-container')
-  const startButton = document.querySelector('#start')
+  const startButton = document.querySelector('#start', 'start')
   const rotateButton = document.querySelector('#rotate')
   const turnDisplay = document.querySelector('#whose-go')
   const infoDisplay = document.querySelector('#info')
@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   rotateButton.addEventListener('click', rotate)
 
+
   /* Move around user ship */
   ships.forEach(ship => ship.addEventListener('dragstart', dragStart))
   userSquares.forEach(square => square.addEventListener('dragstart', dragStart))
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   userSquares.forEach(square => square.addEventListener('dragenter', dragEnter))
   userSquares.forEach(square => square.addEventListener('dragleave', dragLeave))
   userSquares.forEach(square => square.addEventListener('drop', dragDrop))
-  userSquares.forEach(square => square.addEventListener('dragend', dragEnd))
+
 
   let selectedShipNameWithIndex
   let draggedShip
@@ -194,9 +195,50 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!displayGrid.querySelector('.ship')) allShipsPlaced = true
   }
 
-  function dragEnd() {
-    // console.log('dragend')
-  }
+  /* Decided to make the Start game button hide until all ships are placed on the board, then disappear again after clicked. */
+    
+    // Select the button and grid display elements
+    let myButton = document.getElementById("start");
+    let gridDisplay = document.querySelector(".grid-display");
+    
+    // Hide the button by default
+    myButton.style.display = "none";
+    
+    // Create a new observer instance
+    let observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === "childList") {
+          // Check if the grid display has any children
+          if (gridDisplay.children.length === 0) {
+            // Enable the button if the grid display is empty
+            myButton.disabled = false;
+            // Show the button if it was hidden before
+            if (myButton.style.display === "none") {
+              myButton.style.display = "inline-block";
+            }
+          } else {
+            // Disable the button if the grid display is not empty
+            myButton.disabled = true;
+            // Hide the button if it is visible
+            if (myButton.style.display !== "none") {
+              myButton.style.display = "none";
+            }
+          }
+        }
+      });
+    });
+    
+    // Configure and start the observer
+    let config = { childList: true };
+    observer.observe(gridDisplay, config);
+    
+    // Add a click event listener to the button
+    myButton.addEventListener("click", function() {
+      // Hide the button when clicked
+      myButton.style.display = "none";
+      // Code to start the game
+    });
+
   /* Game Logic */
   function playGame() {
     if (isGameOver) return
